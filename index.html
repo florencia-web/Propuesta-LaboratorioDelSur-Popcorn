@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nueva marca de suplementos · Propuesta de lanzamiento — Popcorn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   POPCORN · BRAND SYSTEM — Propuesta Laboratorio del Sur
+   Violeta eléctrico + cian · Poppins + Inter (idéntico a las propuestas Popcorn)
+   ============================================================ */
+:root{
+  --violet-900:#250a4f;
+  --violet-800:#34107a;
+  --violet-700:#4a16a8;
+  --violet-600:#5a18cc;
+  --violet-500:#6e28e8;
+  --violet-glow:#7b34f0;
+  --cyan:#1fe8d8;
+  --cyan-bright:#5cf4e8;
+  --cyan-deep:#12b9ad;
+  --ink:#0e0524;
+  --white:#ffffff;
+  --w-80:rgba(255,255,255,.80);
+  --w-65:rgba(255,255,255,.65);
+  --w-45:rgba(255,255,255,.45);
+  --card:rgba(255,255,255,.045);
+  --card-2:rgba(13,4,40,.45);
+  --line:rgba(255,255,255,.14);
+  --line-soft:rgba(255,255,255,.08);
+  --cyan-line:rgba(31,232,216,.35);
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --logo:url('data:image/png;base64,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');
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--violet-600);
+  color:var(--white);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  line-height:1.55;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(1200px 700px at 78% -8%, rgba(123,52,240,.55), transparent 60%),
+    radial-gradient(1000px 800px at -10% 110%, rgba(31,232,216,.10), transparent 55%),
+    linear-gradient(160deg,#4d12b0 0%,#5a18cc 42%,#3d0f95 100%);
+}
+body::after{
+  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif}
+em,i{font-style:normal}
+::selection{background:var(--cyan);color:var(--ink)}
+
+/* ============ HEADER ============ */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:20px 38px;transition:all .4s var(--ease)}
+.topbar.scrolled{background:rgba(40,12,100,.72);backdrop-filter:blur(14px);padding:13px 38px;box-shadow:0 1px 0 rgba(255,255,255,.07)}
+.brand-tag{font-family:'Poppins';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--w-65);display:flex;align-items:center;gap:9px}
+.brand-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.logo-img{display:inline-block;background:var(--logo) no-repeat center/contain;width:148px;height:44px}
+@media(max-width:640px){.brand-tag{display:none}}
+
+/* progress + dots */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cyan),var(--cyan-bright));z-index:100;box-shadow:0 0 14px var(--cyan)}
+.dots{position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:13px}
+.dots a{position:relative;width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.28);transition:all .3s var(--ease)}
+.dots a:hover{background:var(--w-65);transform:scale(1.25)}
+.dots a.active{background:var(--cyan);box-shadow:0 0 12px var(--cyan);transform:scale(1.35)}
+.dots a span{position:absolute;right:20px;top:50%;transform:translateY(-50%) translateX(6px);white-space:nowrap;font-family:'Poppins';font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:rgba(20,6,55,.9);padding:5px 10px;border-radius:6px;opacity:0;pointer-events:none;transition:all .25s var(--ease);border:1px solid var(--line-soft)}
+.dots a:hover span{opacity:1;transform:translateY(-50%)}
+@media(max-width:900px){.dots{display:none}}
+
+/* ============ SECTIONS ============ */
+section{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 38px 96px}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;position:relative;z-index:2}
+.sfoot{position:absolute;left:38px;right:38px;bottom:30px;z-index:3;display:flex;justify-content:space-between;align-items:center;font-family:'Poppins';font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--w-45)}
+.sfoot .num{color:var(--cyan)}
+@media(max-width:640px){section{padding:106px 22px 84px}.sfoot{left:22px;right:22px}}
+
+/* type */
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Poppins';font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:26px}
+.eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.h-xl{font-weight:700;font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.04;letter-spacing:-.02em}
+.h-lg{font-weight:700;font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.08;letter-spacing:-.015em}
+.h-md{font-weight:600;font-size:clamp(1.3rem,2.2vw,1.8rem);line-height:1.15}
+.cy{color:var(--cyan)}
+.lead{font-size:clamp(1.02rem,1.45vw,1.22rem);color:var(--w-80);max-width:62ch;font-weight:400;line-height:1.65}
+.muted{color:var(--w-65)}
+
+/* reveal */
+.r{opacity:0;transform:translateY(32px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.r.in{opacity:1;transform:none}
+.r.d1{transition-delay:.09s}.r.d2{transition-delay:.18s}.r.d3{transition-delay:.27s}.r.d4{transition-delay:.36s}.r.d5{transition-delay:.45s}
+
+/* ============ HERO ============ */
+#hero{justify-content:center}
+.hero-orbits{position:absolute;right:-160px;top:50%;transform:translateY(-50%);width:720px;height:720px;z-index:0;opacity:.5;pointer-events:none}
+.hero-orbits div{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.12);inset:0}
+.hero-orbits div:nth-child(2){inset:90px}.hero-orbits div:nth-child(3){inset:190px}
+.hero-orbits .core{inset:290px;border:none;background:radial-gradient(circle,rgba(31,232,216,.28),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:34px}}
+.hero-title{font-weight:700;font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:1.05;letter-spacing:-.03em;max-width:20ch}
+.hero-sub{max-width:44ch}
+.hero-sub{margin-top:26px;font-size:clamp(1.05rem,1.55vw,1.32rem);color:var(--w-80);max-width:46ch;line-height:1.6}
+.hero-tags{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px}
+.tag{font-family:'Poppins';font-weight:500;font-size:13px;letter-spacing:.02em;color:var(--w-80);border:1px solid var(--line);padding:9px 18px;border-radius:100px;background:rgba(255,255,255,.05)}
+.hero-media{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;border:1px solid var(--line-soft);box-shadow:0 34px 80px -40px rgba(0,0,0,.6)}
+.hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03)}
+.hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(150deg,rgba(74,22,168,.35),transparent 55%,rgba(31,232,216,.12))}
+.scrollcue{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:9px;color:var(--w-45);font-family:'Poppins';font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.mouse{width:22px;height:34px;border:1.5px solid var(--w-45);border-radius:12px;position:relative}
+.mouse::after{content:'';position:absolute;left:50%;top:7px;width:3px;height:7px;border-radius:3px;background:var(--cyan);transform:translateX(-50%);animation:wheel 1.6s infinite}
+@keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,12px)}}
+
+/* ============ CARDS ============ */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line-soft);border-radius:20px;padding:28px;transition:all .4s var(--ease)}
+.card:hover{transform:translateY(-6px);border-color:var(--cyan-line);background:rgba(255,255,255,.07)}
+.card .ico{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:rgba(31,232,216,.12);border:1px solid var(--cyan-line);color:var(--cyan);margin-bottom:18px}
+.card .ico svg{width:23px;height:23px}
+.card h3{font-size:1.16rem;font-weight:600;margin-bottom:8px}
+.card p{font-size:.93rem;color:var(--w-65);line-height:1.58}
+.card.hl{background:linear-gradient(155deg,rgba(31,232,216,.16),rgba(13,4,40,.4));border-color:var(--cyan-line)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--card);border:1px solid var(--line-soft);border-radius:18px;padding:24px}
+.stat .v{font-family:'Poppins';font-weight:700;font-size:clamp(1.9rem,3.6vw,2.8rem);color:var(--cyan);line-height:1}
+.stat .l{font-size:12.5px;color:var(--w-65);margin-top:10px;line-height:1.45}
+
+/* flowline */
+.flowline{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.step{position:relative}
+.step .n{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--cyan-line);color:var(--cyan);display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:700;margin-bottom:16px;background:rgba(31,232,216,.08)}
+.step h4{font-size:1rem;font-weight:600;margin-bottom:6px;font-family:'Poppins'}
+.step p{font-size:.84rem;color:var(--w-65);line-height:1.45}
+.step::after{content:'';position:absolute;top:23px;left:54px;right:-10px;height:1.5px;background:linear-gradient(90deg,var(--cyan-line),transparent);transform-origin:left;transition:transform 1s var(--ease) .3s;transform:scaleX(0)}
+.flowline.in .step::after{transform:scaleX(1)}
+.step:last-child::after{display:none}
+@media(max-width:900px){.flowline{grid-template-columns:repeat(3,1fr);gap:22px}.step::after{display:none}}
+@media(max-width:520px){.flowline{grid-template-columns:repeat(2,1fr)}}
+
+/* pmap */
+.pmap{border:1px solid var(--line);border-radius:22px;background:var(--card-2);padding:30px}
+.pmap-grid{position:relative;height:380px;border-left:1.5px dashed var(--line);border-bottom:1.5px dashed var(--line);margin:34px 14px 32px}
+.axis-y{position:absolute;left:-4px;top:-26px;font-family:'Poppins';font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--w-45)}
+.axis-x{position:absolute;right:0;bottom:-26px;font-family:'Poppins';font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--w-45)}
+.axis-x.l{right:auto;left:0}
+.blob{position:absolute;border-radius:14px;padding:11px 15px;font-family:'Poppins';font-size:12.5px;font-weight:600;line-height:1.3;max-width:198px}
+.blob small{display:block;font-family:'Inter';font-weight:400;font-size:11px;opacity:.85;margin-top:3px}
+.blob.gym{left:5%;bottom:5%;background:rgba(255,255,255,.07);color:var(--w-80)}
+.blob.farma{left:5%;top:5%;background:rgba(255,255,255,.07);color:var(--w-80)}
+.blob.us{right:4%;top:7%;background:linear-gradient(150deg,var(--cyan),var(--cyan-deep));color:var(--ink);box-shadow:0 16px 40px -14px rgba(31,232,216,.5)}
+@media(max-width:600px){.pmap-grid{height:320px}.blob{max-width:150px;font-size:11px}}
+
+/* lines */
+.line-card{border:1px solid var(--line-soft);border-radius:22px;overflow:hidden;background:var(--card-2);display:flex;flex-direction:column;transition:all .4s var(--ease)}
+.line-card:hover{transform:translateY(-6px);border-color:var(--cyan-line)}
+.cap-photo{height:200px;position:relative;overflow:hidden}
+.cap-photo img{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:saturate(.86) contrast(1.04)}
+.cap-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,12,100,.12),rgba(13,4,40,.86))}
+.line-head{position:absolute;left:22px;bottom:15px;z-index:2}
+.line-head .k{font-family:'Poppins';font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--w-65)}
+.line-head h3{font-family:'Poppins';font-size:1.7rem;font-weight:700;margin-top:3px}
+.line-head h3 .lt{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan);margin-left:8px;vertical-align:middle}
+.line-body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:13px}
+.who{font-size:.9rem;color:var(--w-65);line-height:1.5;padding-bottom:6px;border-bottom:1px solid var(--line-soft)}
+.pf .t{font-family:'Poppins';font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:2px}
+.pf .d{font-size:.87rem;color:var(--w-80);line-height:1.5}
+
+/* stages */
+.stage{border-top:1px solid var(--line-soft);padding:30px 0;display:grid;grid-template-columns:80px 1fr;gap:26px}
+@media(max-width:720px){.stage{grid-template-columns:1fr;gap:10px}}
+.stage-num{font-family:'Poppins';font-weight:700;font-size:clamp(2rem,3.2vw,2.7rem);color:var(--cyan);line-height:1;opacity:.9}
+.stage-title{font-family:'Poppins';font-size:clamp(1.3rem,2.1vw,1.7rem);font-weight:600;margin-bottom:16px}
+.stage-fields{display:grid;grid-template-columns:1fr 1fr;gap:15px 28px}
+@media(max-width:600px){.stage-fields{grid-template-columns:1fr}}
+.sf .t{font-family:'Poppins';font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.sf .d{font-size:.9rem;color:var(--w-65);line-height:1.55}
+.sf.full{grid-column:1/-1;background:rgba(31,232,216,.06);border:1px solid var(--cyan-line);border-radius:12px;padding:13px 16px}
+.sf.full .d{color:var(--w-80)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:820px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.gcell{position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;border:1px solid var(--line-soft)}
+.gcell img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.04);transition:transform .6s var(--ease)}
+.gcell:hover img{transform:scale(1.05)}
+.gcell::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,4,40,.05),rgba(13,4,40,.78))}
+.gcell .gl{position:absolute;left:15px;bottom:13px;z-index:2;font-family:'Poppins';font-weight:600;font-size:.9rem}
+.gcell .gl small{display:block;font-weight:500;font-size:10px;color:var(--cyan);letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px}
+
+/* phases */
+.tl{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+@media(max-width:900px){.tl{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.tl{grid-template-columns:1fr}}
+.phase{border:1px solid var(--line-soft);border-radius:16px;padding:22px 18px;background:var(--card);position:relative;transition:all .4s var(--ease)}
+.phase:hover{transform:translateY(-5px);border-color:var(--cyan-line)}
+.phase .p{font-family:'Poppins';font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan)}
+.phase h4{font-family:'Poppins';font-size:1.05rem;font-weight:600;margin:6px 0 8px}
+.phase p{font-size:.84rem;color:var(--w-65);line-height:1.5}
+.phase.hl{border-color:var(--cyan-line);background:linear-gradient(155deg,rgba(31,232,216,.14),rgba(13,4,40,.4))}
+.phase .badge{position:absolute;top:15px;right:15px;font-family:'Poppins';font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:.06em;text-transform:uppercase}
+
+/* years */
+.year{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:19px 0;border-top:1px solid var(--line-soft)}
+@media(max-width:600px){.year{grid-template-columns:1fr;gap:5px}}
+.year .y{font-family:'Poppins';font-size:1.4rem;font-weight:700;color:var(--cyan)}
+.year .d{font-size:.95rem;color:var(--w-80);line-height:1.58}
+
+/* logos */
+.logos{display:flex;flex-wrap:wrap;gap:10px}
+.logos span{font-family:'Poppins';font-size:12.5px;font-weight:500;color:var(--w-80);border:1px solid var(--line);padding:8px 14px;border-radius:100px;background:rgba(255,255,255,.04)}
+
+/* investment */
+.inv-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--line-soft)}
+.inv-row .n{font-family:'Poppins';font-weight:600;font-size:.98rem}
+.inv-row .v{color:var(--w-45);font-family:'Poppins';font-size:.85rem}
+.pend{display:inline-block;font-family:'Poppins';font-size:10.5px;font-weight:600;color:var(--cyan);border:1px dashed var(--cyan-line);border-radius:7px;padding:3px 9px;margin-left:6px}
+.note-pill{display:inline-block;background:rgba(31,232,216,.06);border:1px solid var(--cyan-line);border-radius:14px;padding:14px 18px;font-size:.9rem;color:var(--w-65);margin-top:20px;line-height:1.5;max-width:62ch}
+
+/* split + media */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+.media{position:relative;overflow:hidden;border-radius:22px;border:1px solid var(--line-soft);aspect-ratio:4/3}
+.media.tall{aspect-ratio:4/5}
+.media img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.media::after{content:'';position:absolute;inset:0;background:linear-gradient(155deg,rgba(74,22,168,.4),rgba(13,4,40,.25) 55%,rgba(31,232,216,.12))}
+.media .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px;font-family:'Poppins';font-weight:500;font-size:.9rem;color:var(--w-80)}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:26px}}
+
+/* full-bleed photo bg */
+.bg-photo{position:absolute;inset:0;z-index:0;overflow:hidden}
+.bg-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.7) brightness(.6) contrast(1.03)}
+.bg-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(40,12,100,.93),rgba(61,15,149,.78))}
+.bg-photo.center::after{background:radial-gradient(120% 120% at 50% 42%,rgba(61,15,149,.72),rgba(13,4,40,.95))}
+.bg-photo.hero-bg img{opacity:.4;filter:saturate(.95) brightness(.95) contrast(1.03)}
+.bg-photo.hero-bg::after{background:linear-gradient(110deg,rgba(61,15,149,.72) 28%,rgba(40,12,100,.5) 62%,rgba(31,232,216,.08))}
+
+/* quote */
+.quote-sec{min-height:72vh}
+.big-quote{font-family:'Poppins';font-weight:600;font-size:clamp(1.7rem,3.6vw,2.9rem);line-height:1.2;letter-spacing:-.01em;max-width:20ch}
+
+/* close */
+#cierre{text-align:center;align-items:center}
+#cierre .wrap{display:flex;flex-direction:column;align-items:center}
+.close-title{font-family:'Poppins';font-weight:700;font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.08;letter-spacing:-.02em;max-width:18ch}
+.contact{margin-top:38px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px 24px}
+.contact .cc{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:18px 26px;min-width:230px}
+.contact .cc b{display:block;font-family:'Poppins';font-size:1.1rem;font-weight:600}
+.contact .cc .role{font-family:'Poppins';font-size:11px;color:var(--cyan);letter-spacing:.06em;text-transform:uppercase;margin:4px 0 8px}
+.contact .cc .mail{color:var(--w-65);font-size:.92rem}
+
+/* cotización interactiva */
+.quote-list{display:flex;flex-direction:column;gap:10px}
+.q-item{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:16px 20px;cursor:pointer;transition:all .3s var(--ease)}
+.q-item:hover{border-color:var(--cyan-line)}
+.q-item.on{background:rgba(31,232,216,.07);border-color:var(--cyan-line)}
+.q-item input{position:absolute;opacity:0;width:0;height:0}
+.q-check{flex:none;width:24px;height:24px;border-radius:7px;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;transition:all .2s var(--ease)}
+.q-check::after{content:'';width:11px;height:6px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(-45deg) scale(0);transition:transform .2s var(--ease);margin-top:-3px}
+.q-item input:checked+.q-check{background:var(--cyan);border-color:var(--cyan)}
+.q-item input:checked+.q-check::after{transform:rotate(-45deg) scale(1)}
+.q-body{flex:1;display:flex;flex-direction:column;min-width:0}
+.q-name{font-family:'Poppins';font-weight:600;font-size:1.02rem;color:var(--white);line-height:1.25}
+.q-desc{font-size:.84rem;color:var(--w-45);margin-top:2px}
+.q-price{font-family:'Poppins';font-weight:700;font-size:1.1rem;color:var(--cyan);white-space:nowrap}
+.q-price small{color:var(--w-45);font-weight:400;font-size:.72rem}
+.q-total{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:14px;padding:16px 20px;border-radius:16px;background:linear-gradient(150deg,rgba(31,232,216,.14),rgba(13,4,40,.4));border:1px solid var(--cyan-line)}
+.q-total>span:first-child{font-family:'Poppins';font-weight:600;font-size:1.05rem}
+.q-total-v{font-family:'Poppins';font-weight:700;font-size:1.5rem;color:var(--cyan);white-space:nowrap}
+.q-total-v small{color:var(--w-45);font-weight:400;font-size:.72rem}
+.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+@media(max-width:640px){.pay-grid{grid-template-columns:1fr}}
+.pay-card{background:var(--card);border:1px solid var(--line-soft);border-radius:18px;padding:24px;transition:all .35s var(--ease)}
+.pay-card:hover{border-color:var(--cyan-line)}
+.pay-k{font-family:'Poppins';font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}
+.pay-card h4{font-family:'Poppins';font-size:1.3rem;font-weight:700;margin:8px 0 6px}
+.pay-off{display:inline-block;font-family:'Poppins';font-weight:600;font-size:.82rem;color:var(--ink);background:var(--cyan);padding:4px 12px;border-radius:100px;margin-bottom:10px}
+.pay-card p{font-size:.9rem;color:var(--w-65);line-height:1.5}
+.pay-total{margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft);font-family:'Poppins';font-weight:600;font-size:1rem;color:var(--w-80)}
+.pay-total b{color:var(--cyan);font-weight:700;font-size:1.1rem}
+</style>
+</head>
+<body>
+
+<div class="progress" id="prog"></div>
+<header class="topbar" id="topbar">
+  <span class="logo-img" role="img" aria-label="Popcorn"></span>
+  <div class="brand-tag"><span class="dot"></span>Propuesta de lanzamiento de marca</div>
+</header>
+<nav class="dots" id="dots"></nav>
+
+<!-- 1 · HERO -->
+<section id="hero" data-label="Inicio">
+  <div class="bg-photo hero-bg"><img src="img/hero.jpg" alt="Laboratorio farmacéutico" loading="eager" onerror="this.style.display='none'"></div>
+  <div class="hero-orbits"><div></div><div></div><div></div><div class="core"></div></div>
+  <div class="wrap">
+    <div style="max-width:680px">
+      <div class="eyebrow r">Popcorn · Marketing, comunicación y creatividad</div>
+      <h1 class="hero-title r d1">No lanzamos un suplemento. Construimos una <span class="cy">marca</span>.</h1>
+      <p class="hero-sub r d2">Una hoja de ruta para llevar la calidad farmacéutica de tu laboratorio a una marca que las personas elijan, lista para vender en octubre.</p>
+      <div class="hero-tags r d3">
+        <span class="tag">Cóndor · Performance</span>
+        <span class="tag">Iberá · Bienestar</span>
+        <span class="tag">Inca · Longevidad</span>
+      </div>
+    </div>
+  </div>
+  <div class="scrollcue"><span>Recorré la propuesta</span><div class="mouse"></div></div>
+  <div class="sfoot"><span>Popcorn</span><span class="num">01 / 16</span></div>
+</section>
+
+<!-- 2 · PUNTO DE PARTIDA -->
+<section id="partida" data-label="Punto de partida">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow r">El punto de partida</div>
+        <h2 class="h-lg r d1">Ya tenés lo más difícil de conseguir.</h2>
+        <p class="lead r d2" style="margin-top:20px">Un laboratorio con años de trayectoria, planta propia y calidad farmacéutica abre una nueva unidad de negocios: suplementos dietarios propios. Tenés la industria, la experiencia y la credibilidad. Lo que todavía no existe es <b class="cy">la marca</b>.</p>
+        <p class="lead r d3" style="margin-top:16px">Lo que ves como una fábrica es, en realidad, el activo de marketing más valioso y escaso del mercado: confianza farmacéutica verificable.</p>
+      </div>
+      <div class="col-img r d2"><div class="media tall"><img src="img/activo.jpg" alt="Control de calidad en laboratorio" onerror="this.style.display='none'"><span class="cap">Calidad de laboratorio como bandera de marca.</span></div></div>
+    </div>
+    <div class="grid g4 r d3" style="margin-top:40px">
+      <div class="card"><div class="ico">__I_CHECK__</div><h3>Planta propia</h3><p>Fabricación integral bajo estándar farmacéutico. Control total de la cadena.</p></div>
+      <div class="card"><div class="ico">__I_SHIELD__</div><h3>Calidad certificada</h3><p>El estándar de un medicamento, aplicado a un suplemento.</p></div>
+      <div class="card"><div class="ico">__I_STAR__</div><h3>Trayectoria</h3><p>Años de experiencia industrial y confianza construida.</p></div>
+      <div class="card hl"><div class="ico">__I_SPARK__</div><h3>Marca: no existe</h3><p>Ni identidad, ni packaging, ni web, ni redes. Todo por construir.</p></div>
+    </div>
+  </div>
+  <div class="sfoot"><span>El punto de partida</span><span class="num">02 / 16</span></div>
+</section>
+
+<!-- 3 · QUOTE -->
+<section class="quote-sec" id="q1" data-label="La tensión">
+  <div class="bg-photo"><img src="img/produccion.jpg" alt="Producción" onerror="this.style.display='none'"></div>
+  <div class="wrap">
+    <div class="eyebrow r">La tensión que resolvemos</div>
+    <p class="big-quote r d1">Sabés fabricar. Todavía no vendés una marca. Popcorn convierte tu respaldo farmacéutico en algo que la gente <span class="cy">desea</span>, no solo que se receta.</p>
+  </div>
+  <div class="sfoot"><span>Popcorn</span><span class="num">03 / 16</span></div>
+</section>
+
+<!-- 4 · OPORTUNIDAD -->
+<section id="oportunidad" data-label="La oportunidad">
+  <div class="wrap">
+    <div class="eyebrow r">La oportunidad</div>
+    <h2 class="h-lg r d1" style="max-width:16ch">El momento correcto, en el mercado correcto.</h2>
+    <div class="stats r d2" style="margin-top:34px">
+      <div class="stat"><div class="v">6,8–9,3%</div><div class="l">CAGR del mercado argentino de suplementos. Crece muy por encima del PBI.</div></div>
+      <div class="stat"><div class="v">69%</div><div class="l">de los hogares ya elige alimentos por sus ingredientes y beneficios (Kantar 2025).</div></div>
+      <div class="stat"><div class="v">+30%</div><div class="l">de share del líder local (ENA, ~USD 300 M/año): mercado grande, con techo alto.</div></div>
+      <div class="stat"><div class="v">2025</div><div class="l">ANMAT habilita por primera vez comunicar beneficios con respaldo (Res. 33/2025).</div></div>
+    </div>
+    <div class="grid g3 r d3" style="margin-top:38px">
+      <div class="card"><div class="ico">__I_BOLT__</div><h3>Deporte · Cóndor</h3><p>La creatina saltó del gimnasio al público general; la proteína es el producto ancla y el más vendido en Mercado Libre.</p></div>
+      <div class="card"><div class="ico">__I_LEAF__</div><h3>Longevidad · Iberá</h3><p>El healthy aging es la megatendencia global 2025–2026: hasta el 60% la declara prioridad (McKinsey).</p></div>
+      <div class="card"><div class="ico">__I_SPARK__</div><h3>Belleza · Inca</h3><p>El colágeno es el 30,7% de la belleza ingerible y 2º en menciones en Argentina. Sin marca premium líder local.</p></div>
+    </div>
+    <p class="lead r d4" style="margin-top:28px;max-width:72ch">Las tres líneas montan sobre las tres tendencias más fuertes del momento, y la nueva regulación recién ahora permite comunicar sus beneficios con evidencia. <b class="cy">Entrar ahora es entrar en el momento correcto, de la forma correcta y legalmente blindado.</b></p>
+  </div>
+  <div class="sfoot"><span>La oportunidad</span><span class="num">04 / 16</span></div>
+</section>
+
+<!-- 5 · MAPA -->
+<section id="mapa" data-label="Mapa competitivo">
+  <div class="wrap">
+    <div class="eyebrow r">El mapa competitivo</div>
+    <h2 class="h-lg r d1" style="max-width:20ch">Dos mundos que no se hablan. Y un lugar vacío en el medio.</h2>
+    <div class="pmap r d2" style="margin-top:28px">
+      <div class="pmap-grid">
+        <span class="axis-y">Más premium y científico</span>
+        <span class="axis-x l">Económico</span>
+        <span class="axis-x">Premium</span>
+        <div class="blob gym">Mundo gym<small>ENA · Star · Gentech · HTN — precio y estética fitness</small></div>
+        <div class="blob farma">Mundo farma<small>Supradyn · Bagó+ · Natier — respaldo, pero frío y sin deseo</small></div>
+        <div class="blob us">Tu marca<small>Calidad farmacéutica + branding premium</small></div>
+      </div>
+      <p class="muted" style="font-size:.9rem;max-width:74ch">Las marcas fitness tienen alcance pero no pueden reclamar calidad farmacéutica; las de farmacia tienen el respaldo pero comunican como producto de mostrador. <b class="cy">El cuadrante premium-farmacéutico está prácticamente vacío en Argentina.</b></p>
+    </div>
+  </div>
+  <div class="sfoot"><span>El mapa competitivo</span><span class="num">05 / 16</span></div>
+</section>
+
+<!-- 6 · REFERENTES -->
+<section id="referentes" data-label="Referentes">
+  <div class="wrap">
+    <div class="eyebrow r">A dónde vamos</div>
+    <h2 class="h-lg r d1" style="max-width:18ch">El benchmark no es ENA ni Bagó. Es el mundo.</h2>
+    <p class="lead r d2" style="margin-top:16px">Las marcas que convirtieron el rigor científico en deseo, adaptadas al mercado y al orgullo industrial argentino.</p>
+    <div class="grid g3 r d3" id="ref-grid" style="margin-top:34px"></div>
+  </div>
+  <div class="sfoot"><span>Referentes globales</span><span class="num">06 / 16</span></div>
+</section>
+
+<!-- 7 · QUOTE -->
+<section class="quote-sec" id="q2" data-label="Posicionamiento">
+  <div class="bg-photo"><img src="img/oportunidad.jpg" alt="Bienestar" onerror="this.style.display='none'"></div>
+  <div class="wrap">
+    <div class="eyebrow r">Posicionamiento</div>
+    <p class="big-quote r d1">No competimos por precio. Construimos una marca que las personas <span class="cy">elijan</span>. En un mercado lleno de humo, la confianza es lo único que no se copia sin una planta propia.</p>
+  </div>
+  <div class="sfoot"><span>Popcorn</span><span class="num">07 / 16</span></div>
+</section>
+
+<!-- 8 · POSICIONAMIENTO -->
+<section id="posicionamiento" data-label="Posicionamiento">
+  <div class="wrap">
+    <div class="eyebrow r">El territorio de la marca</div>
+    <h2 class="h-lg r d1" style="max-width:16ch">Calidad farmacéutica premium, hecha en Argentina.</h2>
+    <div class="grid g3 r d2" id="pilares" style="margin-top:34px"></div>
+    <p class="lead r d3" style="margin-top:30px;max-width:68ch">Todo bajo una <b class="cy">marca madre</b> que aporta el sello de confianza, y tres líneas con personalidad propia y el mismo estándar de rigor.</p>
+  </div>
+  <div class="sfoot"><span>Posicionamiento</span><span class="num">08 / 16</span></div>
+</section>
+
+<!-- 9 · LINEAS -->
+<section id="lineas" data-label="Las 3 líneas">
+  <div class="wrap">
+    <div class="eyebrow r">Las tres líneas · a quién le hablamos</div>
+    <h2 class="h-lg r d1" style="max-width:18ch">Tres públicos, tres tonos, un mismo respaldo.</h2>
+    <div class="grid g3 r d2" id="lines-grid" style="margin-top:34px"></div>
+  </div>
+  <div class="sfoot"><span>Públicos y buyer personas</span><span class="num">09 / 16</span></div>
+</section>
+
+<!-- 10 · METODO -->
+<section id="metodo" data-label="El método">
+  <div class="wrap">
+    <div class="eyebrow r">El método</div>
+    <h2 class="h-lg r d1" style="max-width:18ch">¿Por qué hacerlo por etapas?</h2>
+    <p class="lead r d2" style="margin-top:16px">Una marca no se construye de un día para otro. Se construye por capas, y cada capa sostiene a la siguiente. Hacerlo así protege tu inversión, reparte el esfuerzo en el tiempo y garantiza una base sólida.</p>
+    <div class="flowline r d3" style="margin-top:38px">
+      <div class="step"><div class="n">01</div><h4>Estrategia</h4><p>El para qué y el para quién.</p></div>
+      <div class="step"><div class="n">02</div><h4>Identidad</h4><p>Cómo se ve, suena y se siente.</p></div>
+      <div class="step"><div class="n">03</div><h4>Ecosistema</h4><p>Dónde vive la marca.</p></div>
+      <div class="step"><div class="n">04</div><h4>Posicionamiento</h4><p>Que la conozcan y confíen.</p></div>
+      <div class="step"><div class="n">05</div><h4>Demanda</h4><p>Que la quieran.</p></div>
+      <div class="step"><div class="n">06</div><h4>Venta</h4><p>Que compren y vuelvan.</p></div>
+    </div>
+    <p class="lead r d4" style="margin-top:34px;max-width:62ch"><b class="cy" style="font-size:1.12rem">Una marca fuerte no nace de una campaña. Nace de una estrategia construida paso a paso.</b></p>
+  </div>
+  <div class="sfoot"><span>El método</span><span class="num">10 / 16</span></div>
+</section>
+
+<!-- 11 · ROADMAP -->
+<section id="roadmap" data-label="El roadmap" style="min-height:auto;padding-bottom:56px">
+  <div class="wrap">
+    <div class="eyebrow r">El recorrido que proponemos</div>
+    <h2 class="h-lg r d1" style="max-width:20ch">Así queremos acompañarlos, etapa por etapa.</h2>
+    <p class="lead r d2" style="margin-top:14px">Este es el camino completo para construir la marca y hacerla crecer: una guía de hacia dónde vamos, no una lista para contratar todo de una vez. <b class="cy">Hoy arrancamos por lo esencial</b>, y el resto lo vamos sumando cuando cada etapa lo pida.</p>
+    <div class="r d3" style="margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+      <span style="font-family:'Poppins';font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)">Empezamos hoy por</span>
+      <span class="tag">Manual de marca</span>
+      <span class="tag">Estrategia inicial + manual de comunicación</span>
+      <span class="tag">Sitio web · 5 secciones</span>
+    </div>
+    <div class="gallery r d3" style="margin-top:28px">
+      <div class="gcell"><img src="img/packaging.jpg" alt="Packaging" onerror="this.style.display='none'"><span class="gl"><small>Marca</small>Branding y Packaging</span></div>
+      <div class="gcell"><img src="img/ecommerce.jpg" alt="Canales digitales" onerror="this.style.display='none'"><span class="gl"><small>Canales</small>Web y ecosistema</span></div>
+      <div class="gcell"><img src="img/audiovisual.jpg" alt="Audiovisual" onerror="this.style.display='none'"><span class="gl"><small>Contenido</small>Audiovisual</span></div>
+      <div class="gcell"><img src="img/redes.jpg" alt="Redes" onerror="this.style.display='none'"><span class="gl"><small>Demanda</small>Redes y publicidad</span></div>
+    </div>
+    <div id="stages" style="margin-top:22px"></div>
+  </div>
+  <div class="sfoot"><span>El roadmap · 13 etapas</span><span class="num">11 / 16</span></div>
+</section>
+
+<!-- 12 · CRONOGRAMA -->
+<section id="cronograma" data-label="Cronograma">
+  <div class="wrap">
+    <div class="eyebrow r">Cronograma hacia octubre</div>
+    <h2 class="h-lg r d1" style="max-width:18ch">Un camino ordenado, sin abrumar.</h2>
+    <div class="tl r d2" style="margin-top:32px">
+      <div class="phase"><div class="p">Fase 1</div><h4>Fundación</h4><p>Estrategia, branding y packaging. La base de todo.</p></div>
+      <div class="phase"><div class="p">Fase 2</div><h4>Ecosistema</h4><p>Setup de canales, web institucional y start up digital.</p></div>
+      <div class="phase"><div class="p">Fase 3</div><h4>Contenido</h4><p>Producción audiovisual y contenido de redes.</p></div>
+      <div class="phase"><div class="p">Fase 4</div><h4>Demanda</h4><p>Gestión de redes, publicidad digital y canal mayorista.</p></div>
+      <div class="phase hl"><div class="badge">Octubre</div><div class="p">Fase 5</div><h4>Lanzamiento</h4><p>El momento de alto impacto y el crecimiento 2027.</p></div>
+    </div>
+    <p class="muted r d3" style="margin-top:22px;font-size:.9rem;max-width:60ch">Las 13 etapas se distribuyen en estas cinco fases. El detalle de fechas se ajusta al arranque del proyecto.</p>
+  </div>
+  <div class="sfoot"><span>Cronograma</span><span class="num">12 / 16</span></div>
+</section>
+
+<!-- 13 · ESCALABILIDAD -->
+<section id="escala" data-label="Escalabilidad">
+  <div class="wrap">
+    <div class="eyebrow r">Crecimiento · el proyecto no termina en octubre</div>
+    <h2 class="h-lg r d1" style="max-width:16ch">La marca sigue creciendo durante 2027.</h2>
+    <div class="r d2" style="margin-top:28px;max-width:820px">
+      <div class="year"><div class="y">Octubre</div><div class="d"><b>Lanzamiento.</b> La marca nace en el mercado con todos sus activos orquestados.</div></div>
+      <div class="year"><div class="y">Noviembre</div><div class="d"><b>Optimización.</b> Aprender de los datos reales: ajustar pauta, fichas y contenido.</div></div>
+      <div class="year"><div class="y">Diciembre</div><div class="d"><b>Escalado.</b> Primeras campañas de temporada y consolidación de canales.</div></div>
+      <div class="year"><div class="y">2027</div><div class="d"><b>Expansión.</b> Ecommerce propio, nuevos productos y líneas, marketplace ampliado, programa de fidelización y suscripciones, porque el negocio de suplementos vive de la recompra.</div></div>
+    </div>
+  </div>
+  <div class="sfoot"><span>Escalabilidad 2027</span><span class="num">13 / 16</span></div>
+</section>
+
+<!-- 14 · POR QUE POPCORN -->
+<section id="popcorn" data-label="Por qué Popcorn">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow r">Por qué Popcorn</div>
+        <h2 class="h-lg r d1">Una agencia que entiende de salud y de negocio.</h2>
+        <p class="lead r d2" style="margin-top:18px">Años trabajando con instituciones de salud, comunicación regulada y públicos exigentes. No vendemos publicaciones: vendemos crecimiento.</p>
+        <div class="logos r d3" style="margin-top:22px">
+          <span>Hospital Universitario Austral</span><span>ManLab</span><span>Fitz Roy</span><span>CETAC Juncal</span><span>Swiss Medical</span><span>Red Itínere</span>
+        </div>
+      </div>
+      <div class="col-img r d2"><div class="media"><img src="img/equipo.jpg" alt="Equipo Popcorn" onerror="this.style.display='none'"></div></div>
+    </div>
+    <div class="grid g3 r d3" style="margin-top:38px">
+      <div class="card"><div class="ico">__I_HEART__</div><h3>Especialización en salud</h3><p>Comunicación regulada, evidencia y públicos médicos: lo que exige un laboratorio.</p></div>
+      <div class="card"><div class="ico">__I_CHART__</div><h3>Mirada de negocio</h3><p>Cada etapa responde a un objetivo comercial concreto, no a una pieza suelta.</p></div>
+      <div class="card"><div class="ico">__I_LAYERS__</div><h3>Equipo integral</h3><p>Estrategia, branding, packaging, web, audiovisual, paid media y contenido, bajo una misma dirección.</p></div>
+    </div>
+  </div>
+  <div class="sfoot"><span>Por qué Popcorn</span><span class="num">14 / 16</span></div>
+</section>
+
+<!-- 15 · INVERSION -->
+<section id="inversion" data-label="Inversión">
+  <div class="wrap">
+    <div class="eyebrow r">La cotización de hoy</div>
+    <h2 class="h-lg r d1" style="max-width:20ch">Empezamos por la base. Esto es lo que cotizamos hoy.</h2>
+    <p class="lead r d2" style="margin-top:14px">El recorrido completo es nuestra hoja de ruta. Para arrancar cotizamos solo lo que necesitamos para poner la marca de pie: identidad, estrategia y presencia. El resto se suma etapa por etapa, a medida que la marca crece.</p>
+    <p class="muted r d3" style="margin-top:18px;font-size:.92rem">Marcá los proyectos con los que querés avanzar. El total se calcula solo.</p>
+    <div class="quote-list r d3" style="margin-top:12px;max-width:860px">
+      <label class="q-item">
+        <input type="checkbox" checked data-price="2135000">
+        <span class="q-check"></span>
+        <span class="q-body"><span class="q-name">Manual de marca completo</span><span class="q-desc">Logo de marca paraguas + logos de las 3 líneas</span></span>
+        <span class="q-price">$2.135.000 <small>+ IVA</small></span>
+      </label>
+      <label class="q-item">
+        <input type="checkbox" checked data-price="2000000">
+        <span class="q-check"></span>
+        <span class="q-body"><span class="q-name">Estrategia de lanzamiento + manual de comunicación</span><span class="q-desc">Estrategia inicial, posicionamiento y lineamientos de comunicación</span></span>
+        <span class="q-price">$2.000.000 <small>+ IVA</small></span>
+      </label>
+      <label class="q-item">
+        <input type="checkbox" checked data-price="2400000">
+        <span class="q-check"></span>
+        <span class="q-body"><span class="q-name">Sitio web</span><span class="q-desc">Sitio institucional de 5 secciones</span></span>
+        <span class="q-price">$2.400.000 <small>+ IVA</small></span>
+      </label>
+    </div>
+    <div class="q-total r d3" style="max-width:860px"><span>Total para empezar</span><span class="q-total-v" id="qTotal">$6.535.000 <small>+ IVA</small></span></div>
+
+    <div class="r d4" style="margin-top:34px;max-width:860px">
+      <h3 class="h-md" style="margin-bottom:8px">Formas de pago</h3>
+      <div class="pay-grid">
+        <div class="pay-card">
+          <div class="pay-k">Opción 1 · Contado</div>
+          <h4>100% adelantado</h4>
+          <div class="pay-off">3% de descuento</div>
+          <p>Un solo pago al inicio del proyecto.</p>
+          <div class="pay-total" id="payCash">Total con descuento: <b>$6.338.950</b> + IVA</div>
+        </div>
+        <div class="pay-card">
+          <div class="pay-k">Opción 2 · En dos pagos</div>
+          <h4>50% y 50%</h4>
+          <p>50% al inicio y 50% al finalizar el proyecto o al mes, lo que ocurra primero.</p>
+          <div class="pay-total" id="pay5050">2 pagos de <b>$3.267.500</b> + IVA</div>
+        </div>
+      </div>
+    </div>
+    <div class="note-pill r d5">El resto de las etapas (packaging, redes, publicidad, canal mayorista, lanzamiento y acompañamiento mensual) se cotiza más adelante, a medida que avanzamos juntos. Los valores están expresados en pesos y no incluyen IVA.</div>
+    <div class="r d5" style="margin-top:28px">
+      <h3 class="h-md" style="margin-bottom:10px">Próximos pasos</h3>
+      <p class="lead">1 · Aprobación de la estrategia como punto de partida (Etapa 1). &nbsp; 2 · Agenda del workshop. &nbsp; 3 · Cronograma firmado hacia octubre.</p>
+    </div>
+  </div>
+  <div class="sfoot"><span>Inversión</span><span class="num">15 / 16</span></div>
+</section>
+
+<!-- 16 · CIERRE -->
+<section id="cierre" data-label="Empecemos">
+  <div class="bg-photo center"><img src="img/cierre.jpg" alt="Construir una marca" onerror="this.style.display='none'"></div>
+  <div class="wrap">
+    <div class="eyebrow r" style="justify-content:center">Empecemos</div>
+    <h2 class="close-title r d1">No estamos haciendo un logo. Estamos construyendo una empresa.</h2>
+    <p class="lead r d2" style="margin-top:22px;text-align:center;max-width:60ch">Tenés lo más difícil. Nosotros construimos lo que falta, y te acompañamos desde la estrategia hasta el crecimiento.</p>
+    <div class="contact r d3">
+      <div class="cc"><b>Sol</b><div class="role">General Manager · Popcorn</div><div class="mail">sol@somospopcorn.com</div></div>
+      <div class="cc"><b>Florencia</b><div class="role">Operations Manager · Popcorn</div><div class="mail">florencia@somospopcorn.com</div></div>
+    </div>
+  </div>
+  <div class="sfoot"><span>Popcorn</span><span class="num">16 / 16</span></div>
+</section>
+
+<script>
+const IC={
+ check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+ shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+ star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z"/></svg>',
+ spark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>',
+ bolt:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>',
+ leaf:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15 5 18 3 20 3c0 6-2 13-9 13a5 5 0 0 1-5-5"/><path d="M6 21c0-4 3-8 8-9"/></svg>',
+ swap:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4 3 8l4 4"/><path d="M3 8h13a5 5 0 0 1 0 10h-1"/><path d="M17 20l4-4-4-4"/></svg>',
+ globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>',
+ heart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.3-9A4.9 4.9 0 0 1 12 6a4.9 4.9 0 0 1 9.3 5C19 15.6 12 20 12 20z"/></svg>',
+ chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M7 20V10M12 20V4M17 20v-7"/></svg>',
+ layers:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5z"/><path d="M2 13l10 5 10-5M2 18l10 5 10-5"/></svg>',
+ flask:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 8a2 2 0 0 0 1.7 3h10.6A2 2 0 0 0 19 17l-5-8V3"/><path d="M7.5 14h9"/></svg>'
+};
+document.querySelectorAll('.ico').forEach(el=>{const k=el.textContent.trim();const m={'__I_CHECK__':'check','__I_SHIELD__':'shield','__I_STAR__':'star','__I_SPARK__':'spark','__I_BOLT__':'bolt','__I_LEAF__':'leaf','__I_SWAP__':'swap','__I_GLOBE__':'globe','__I_HEART__':'heart','__I_CHART__':'chart','__I_LAYERS__':'layers'};if(m[k])el.innerHTML=IC[m[k]];});
+
+const REFERENTES=[
+  {i:'flask',n:'Momentous',d:'El rigor científico ES la estética premium. Testeo de terceros, fórmulas science-backed, suscripción desde el día 1.'},
+  {i:'shield',n:'Thorne',d:'La confianza clínica vuelta prestigio de marca. El análogo internacional más cercano a lo que un laboratorio puede ser.'},
+  {i:'star',n:'AG1',d:'Rebrand editorial que sacó a un polvo del ruido fitness. Ritual y suscripción. Marca de ~USD 1,2 Bn con un solo producto.'},
+  {i:'spark',n:'Ritual',d:'La transparencia como sistema de diseño: mostrar lo que otros esconden. Cápsula y frasco transparentes.'},
+  {i:'leaf',n:'Vital Proteins',d:'Longevidad y belleza con curaduría, estética cuidada y packaging sostenible como código premium.'},
+  {i:'heart',n:'Seed',d:'La experiencia post-compra, con unboxing y booklet educativo, fideliza y genera contenido orgánico.'},
+];
+const PILARES=[
+  {i:'flask',t:'Calidad farmacéutica',d:'El estándar de un medicamento aplicado a un suplemento. Trazabilidad y control como bandera, no como letra chica.'},
+  {i:'shield',t:'Confianza',d:'El activo escaso del mercado. La marca seria en una categoría llena de humo.'},
+  {i:'chart',t:'Respaldo científico',d:'Evidencia y declaraciones de propiedades saludables autorizadas por ANMAT. Comunicación con base científica en una categoría llena de humo.'},
+  {i:'globe',t:'Industria argentina',d:'Orgullo y soberanía sanitaria como código premium, no como descuento.'},
+  {i:'layers',t:'Fabricación propia',d:'Control total de la cadena. Se puede mostrar lo que otros no pueden.'},
+  {i:'star',t:'Marca premium',d:'Estética editorial, experiencia y ritual. Deseo, no solo función.'},
+];
+const LINES=[
+  {cls:'c',img:'img/condor.jpg',k:'Línea 01',n:'Cóndor',tag:'Performance',who:'Hombre o mujer activo, 18 a 40, gimnasio, crossfit, running. Aspiracional-fitness, disciplinado, se informa.',
+   f:[['Busca','Rendimiento y recuperación reales, dosis correcta, sabor, relación valor-calidad.'],
+      ['Dónde decide','Instagram y TikTok fitness, recomendación del entrenador, compra en Mercado Libre y tiendas especializadas.'],
+      ['Objeciones','¿Otra marca más de potes? Desconfianza tras casos de productos dudosos.'],
+      ['Qué lo convierte','Prueba social, dosis transparentes y la garantía de estar testeado como un medicamento.']]},
+  {cls:'i',img:'img/ibera.jpg',k:'Línea 02',n:'Iberá',tag:'Bienestar',who:'Adulto de 35 o más que se empieza a cuidar: energía, sueño, defensas, prevención. No es del mundo gym.',
+   f:[['Busca','Sentirse mejor y prevenir. Seguridad y respaldo por encima de todo.'],
+      ['Dónde decide','Google, farmacia, recomendación médica o de nutricionista, Mercado Libre. Investiga antes de comprar.'],
+      ['Objeciones','¿Sirve de verdad? Miedo a lo que consume, saturación de opciones.'],
+      ['Qué lo convierte','Origen farmacéutico, evidencia y comunicación clara, sin promesas mágicas.']]},
+  {cls:'n',img:'img/inca.jpg',k:'Línea 03',n:'Inca',tag:'Longevidad',who:'Mujer de 40 o más que invierte en healthy aging: piel, cabello, articulaciones, longevidad, etapa hormonal.',
+   f:[['Busca','Resultados visibles a 8 o 12 semanas, formato premium, ritual diario, transparencia de ingredientes.'],
+      ['Dónde decide','Instagram, dietéticas y farmacias premium, ecommerce propio, Mercado Libre. Sensible a la estética.'],
+      ['Objeciones','¿Otro colágeno más? Dudas de eficacia, saturación de belleza genérica.'],
+      ['Qué la convierte','Evidencia, estética editorial, ritual y curaduría. La categoría con más espacio premium local.']]},
+];
+const STAGES=[
+  {n:'01',t:'Estrategia inicial y manual de comunicación',o:'Definir el cimiento y la voz de la marca: qué es, para quién, por qué existe, cómo se organiza y cómo comunica.',a:'Workshop, discovery, arquitectura de marca (madre más Cóndor, Iberá e Inca), naming, buyer personas, mapa competitivo, propósito, misión, visión, valores, personalidad, posicionamiento, propuesta de valor y manual de comunicación (tono, mensajes clave y lineamientos por línea).',w:'Sin estrategia, el diseño es decoración y la pauta es gasto. Acá se decide el activo diferencial, la voz de la marca y se evita el mayor riesgo: dispersión entre las tres líneas.',e:'Plataforma de marca, arquitectura y naming, buyer personas, mapa de posicionamiento, propuesta de valor y manual de comunicación.',p:'Entrega el brief estratégico y de comunicación que da dirección a cada decisión de diseño.'},
+  {n:'02',t:'Manual de marca',o:'Darle a la estrategia una forma visual y verbal memorable, premium y coherente.',a:'Logo de marca paraguas y logos de las tres líneas, sistema visual, tipografías, paleta, sistema gráfico, iconografía, aplicaciones, manual de marca y primeros mockups.',w:'Una identidad sólida reduce el costo de adquisición y separa una marca que se recuerda de un producto más en la góndola.',e:'Logotipos y sistema de líneas, brandbook completo, kit de aplicaciones y archivos productivos.',p:'Entrega el sistema visual para diseñar el packaging y todos los puntos de contacto.'},
+  {n:'03',t:'Packaging',o:'Convertir la identidad en el punto de contacto más importante de la categoría: el envase.',a:'Diseño de envases y etiquetas, jerarquía de información, cumplimiento de normativa ANMAT, sistema escalable para futuros productos y mockups.',w:'El packaging define la percepción premium frente a la de commodity, y hace visible y legal el respaldo farmacéutico. El sistema escalable evita rediseñar por cada producto.',e:'Packaging del portfolio inicial, sistema escalable, artes finales para imprenta y mockups premium.',p:'Genera los assets de producto que alimentan la web y todos los canales.'},
+  {n:'04',t:'Sitio web (5 secciones)',o:'Una casa digital premium que genere confianza y funcione como centro de credibilidad.',a:'Sitio institucional de 5 secciones: home, marca e historia, calidad, productos (las tres líneas) y contacto. Con CTA a WhatsApp y preparado para evolucionar a ecommerce.',w:'La web construye la confianza y la autoridad que ningún otro canal puede dar, y es el centro al que llega todo el tráfico. Queda preparada para crecer cuando el volumen lo justifique.',e:'Sitio institucional responsive de 5 secciones e integración con WhatsApp.',p:'Da la autoridad de marca que potencia todos los canales de venta.'},
+  {n:'05',t:'Diseño canal mayorista',o:'Dotar a la fuerza comercial y a la distribución (farmacias, dietéticas, droguerías) de material profesional.',a:'Presentación comercial, catálogo PDF, carpeta comercial, presentación para droguerías, material POP, exhibidores, roll-ups, flyers y material para vendedores.',w:'La mayoría del volumen de la categoría se vende en el canal físico. Sin material profesional, la marca premium se ve amateur ante el comprador mayorista.',e:'Kit comercial completo, set de POP y exhibidores y material de venta.',p:'Deja lista la distribución y el sell-in para que el producto esté donde el consumidor lo busca.'},
+  {n:'06',t:'Start up de redes sociales',o:'Dar de alta y dejar listos los canales donde la marca va a comunicar, ordenados y profesionales desde el día 1.',a:'Alta y setup de perfiles de redes (usuarios, bios, avatares), WhatsApp Business y Google Business. Definición de la identidad de los perfiles y de los primeros pilares de contenido.',w:'Cada punto de contacto comunica, incluso antes de que la marca hable. Un ecosistema prolijo transmite seriedad; uno improvisado destruye la percepción premium.',e:'Perfiles creados y optimizados, WhatsApp Business y Google Business configurados, y guía de identidad de perfiles.',p:'Deja los canales listos para empezar a producir contenido y gestionar la comunidad.'},
+  {n:'07',t:'Start up de publicidad digital',o:'Montar la infraestructura publicitaria para poder pautar de forma medible desde el lanzamiento.',a:'Creación y configuración de cuentas (Meta Ads y Google Ads), píxel y eventos de conversión, estructura de campañas, audiencias base y tablero de métricas.',w:'Sin la base técnica bien montada, la pauta se desperdicia. Dejar todo configurado permite medir y optimizar desde el primer peso invertido.',e:'Cuentas y píxel configurados, estructura de campañas, audiencias base y tablero de KPIs.',p:'Deja lista la maquinaria para que la gestión de pauta genere demanda medible.'},
+  {n:'08',t:'Producción audiovisual',o:'Generar el banco de contenido visual premium que da vida y ritmo a todos los canales.',a:'Fotografía de producto, lifestyle y de laboratorio, producción y materia prima; videos comerciales, reels, behind the scenes y contenido educativo e institucional.',w:'Tu planta, tu rigor y tu gente son contenido de marca imposible de copiar. Una sola jornada de producción alimenta meses de canales.',e:'Banco de fotos por línea, piezas de video (comercial, reels, BTS) y contenido de laboratorio y calidad.',p:'Entrega la materia prima visual sin la cual las redes y la pauta no comunican con nivel premium.'},
+  {n:'09',t:'Gestión de redes sociales',o:'Gestionar la presencia, el contenido y la comunidad de la marca mes a mes.',a:'Plan y calendario editorial, creación de contenido, pilares (educación, calidad y ciencia, backstage, lifestyle y comunidad), community management y reportes. Tono por línea bajo el sello de la marca madre.',w:'El descubrimiento ocurre en Instagram y TikTok, y la recomendación pesa más del 30% de la decisión. Ser la marca que explica captura la demanda que la competencia deja sobre la mesa.',e:'Calendario mensual, lotes de contenido, community management y reporte de resultados.',p:'Genera el terreno orgánico y la audiencia que la pauta amplifica y convierte.'},
+  {n:'10',t:'Gestión de publicidad digital',o:'Gestionar y optimizar la inversión publicitaria para construir demanda de marca y generar conversión medible.',a:'Gestión de Meta Ads, Google Ads y remarketing; campañas de lanzamiento, branding y conversión; optimización continua y reportes.',w:'El mundo fitness pauta agresivo por precio y el farma casi no pauta: hay aire para construir demanda de marca con creatividad editorial, no solo demanda de producto.',e:'Campañas activas por objetivo y canal, optimización mensual, plan de medición (KPIs) y reportes.',p:'Lleva tráfico calificado y notoriedad que sostienen el crecimiento.'},
+  {n:'11',t:'Acompañamiento estratégico mensual',o:'Acompañar al cliente mes a mes con dirección estratégica, para que la marca crezca con método y no pierda el rumbo.',a:'Reuniones de estrategia, definición de prioridades y objetivos, seguimiento de KPIs, coordinación entre áreas (contenido, pauta, web y comercial) y recomendaciones de mejora continua.',w:'Una marca nueva necesita a alguien que mire el conjunto y ajuste el rumbo. El acompañamiento convierte piezas sueltas en una estrategia viva.',e:'Reuniones mensuales, tablero de objetivos y KPIs, plan de acción por mes y recomendaciones.',p:'Sostiene y potencia todo lo construido, y alimenta el crecimiento del año siguiente.'},
+  {n:'12',t:'Lanzamiento',o:'Convertir toda la construcción previa en un momento de alto impacto que instale la marca en octubre.',a:'Campaña teaser, cuenta regresiva, videos de lanzamiento, activación de redes, mailing y prensa, activaciones y contenido de lanzamiento en todos los canales.',w:'El lanzamiento no es publicar el primer producto: es orquestar todos los activos para que la marca nazca con fuerza, no en silencio.',e:'Plan de lanzamiento cronometrado, piezas teaser y de reveal, gacetilla de prensa y calendario de activaciones.',p:'Deja la marca viva en el mercado y con datos reales para optimizar y escalar.'},
+  {n:'13',t:'Crecimiento y escalabilidad',o:'Demostrar que el proyecto no termina en octubre: la marca crece con método durante 2027.',a:'Octubre: lanzamiento. Noviembre: optimización. Diciembre: escalado. 2027: ecommerce propio, nuevos productos, marketplace, fidelización y suscripciones.',w:'El negocio de suplementos vive de la recurrencia y del valor de vida del cliente. El horizonte 2027 posiciona a Popcorn como partner de largo plazo, no como un proyecto con fecha de vencimiento.',e:'Roadmap 2027, hitos por trimestre y definición de próximas capacidades (ecommerce, suscripción, fidelización).',p:'Vuelve a la estrategia como un ciclo de mejora continua: la marca escala sobre la base construida.'},
+];
+
+const refG=document.getElementById('ref-grid');
+REFERENTES.forEach((x,i)=>refG.insertAdjacentHTML('beforeend',`<div class="card r d${(i%3)+1}"><div class="ico">${IC[x.i]}</div><h3>${x.n}</h3><p>${x.d}</p></div>`));
+const pilG=document.getElementById('pilares');
+PILARES.forEach((x,i)=>pilG.insertAdjacentHTML('beforeend',`<div class="card r d${(i%3)+1}"><div class="ico">${IC[x.i]}</div><h3>${x.t}</h3><p>${x.d}</p></div>`));
+const linG=document.getElementById('lines-grid');
+LINES.forEach((L,i)=>{
+  const fields=L.f.map(f=>`<div class="pf"><div class="t">${f[0]}</div><div class="d">${f[1]}</div></div>`).join('');
+  linG.insertAdjacentHTML('beforeend',`<div class="line-card ${L.cls} r d${i+1}"><div class="cap-photo"><img src="${L.img}" alt="${L.n}" onerror="this.style.display='none'"><div class="line-head"><div class="k">${L.k}</div><h3>${L.n}<span class="lt">${L.tag}</span></h3></div></div><div class="line-body"><div class="who">${L.who}</div>${fields}</div></div>`);
+});
+const stG=document.getElementById('stages');
+STAGES.forEach(s=>stG.insertAdjacentHTML('beforeend',`<div class="stage r"><div class="stage-num">${s.n}</div><div><div class="stage-title">${s.t}</div><div class="stage-fields"><div class="sf"><div class="t">Objetivo</div><div class="d">${s.o}</div></div><div class="sf"><div class="t">Alcance</div><div class="d">${s.a}</div></div><div class="sf"><div class="t">Por qué importa</div><div class="d">${s.w}</div></div><div class="sf"><div class="t">Entregables</div><div class="d">${s.e}</div></div><div class="sf full"><div class="t">Prepara la siguiente etapa</div><div class="d">${s.p}</div></div></div></div></div>`));
+
+const secs=[...document.querySelectorAll('section[data-label]')];
+const dots=document.getElementById('dots');
+secs.forEach(s=>dots.insertAdjacentHTML('beforeend',`<a href="#${s.id}" data-id="${s.id}"><span>${s.dataset.label}</span></a>`));
+const dotEls=[...document.querySelectorAll('.dots a')];
+
+const topbar=document.getElementById('topbar'),prog=document.getElementById('prog');
+function onScroll(){const sc=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;prog.style.width=(sc/h*100)+'%';topbar.classList.toggle('scrolled',sc>40);}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.r,.flowline').forEach(el=>io.observe(el));
+const so=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){dotEls.forEach(d=>d.classList.toggle('active',d.dataset.id===e.target.id))}}),{threshold:.45});
+secs.forEach(s=>so.observe(s));
+
+/* cotización interactiva */
+const qFmt=n=>'$'+n.toLocaleString('es-AR');
+const qInputs=[...document.querySelectorAll('.q-item input')];
+function qRecompute(){
+  let t=0;
+  qInputs.forEach(i=>{const it=i.closest('.q-item');it.classList.toggle('on',i.checked);if(i.checked)t+=parseInt(i.dataset.price,10);});
+  const qt=document.getElementById('qTotal');if(qt)qt.innerHTML=qFmt(t)+' <small>+ IVA</small>';
+  const pc=document.getElementById('payCash');if(pc)pc.innerHTML='Total con descuento: <b>'+qFmt(Math.round(t*0.97))+'</b> + IVA';
+  const p5=document.getElementById('pay5050');if(p5)p5.innerHTML='2 pagos de <b>'+qFmt(Math.round(t/2))+'</b> + IVA';
+}
+qInputs.forEach(i=>i.addEventListener('change',qRecompute));
+qRecompute();
+</script>
+</body>
+</html>
